@@ -16,17 +16,25 @@ const COLORS = {
   white: 9
 }
 
-// export const 
-const decodedValue = (color1, color2) => {
+function decodedValue([color1, color2]) {
   let varColor1 = color1.toLowerCase();
   let varColor2 = color2.toLowerCase();
 
-  if (COLORS.hasOwnProperty(varColor1) && COLORS.hasOwnProperty(varColor2)) {
-    let strColorVal1 = COLORS[varColor1].toString();
-    let strColorVal2 = COLORS[varColor2].toString();
 
-    console.log(`${strColorVal1}${strColorVal2}`);
+  // var colors = colorCombo.split(" ")
+  // colors.splice(1, 1);
+
+  // let varColor1 = colors[0].toLowerCase();
+  // let varColor2 = colors[1].toLowerCase();
+
+  // console.log(varColor1, varColor2);
+
+  if (COLORS.hasOwnProperty(varColor1) && COLORS.hasOwnProperty(varColor2)) {
+    let intColorVal1 = parseInt(COLORS[varColor1]);
+    let intColorVal2 = parseInt(COLORS[varColor2]);
+
+    return (`${intColorVal1}${intColorVal2}`);
   }
 };
 
-decodedValue("green", "WHITE");
+// decodedValue("Orange and Orange");
